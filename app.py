@@ -27,7 +27,7 @@ def get_feed(series_id):
             fe = fg.add_entry()
             fe.id(episode['id'])
             fe.title(episode['title'])
-            fe.link(href=episode['audioAssets'][4]['url'])
+            fe.enclosure(length=episode['audioAssets'][4]['filesize'], type='audio/mpeg', url=episode['audioAssets'][4]['url'])
             fe.description(episode.get('description', ''))
             fe.pubDate(episode.get('latestPublishTime', ''))
             
