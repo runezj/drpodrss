@@ -1,0 +1,8 @@
+version: '3'
+services:
+  drpodrss:
+    build:
+      context: .
+    container_name: drpodrss
+    restart: unless-stopped
+
