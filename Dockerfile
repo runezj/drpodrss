@@ -2,9 +2,10 @@ FROM python:3-slim
 
 WORKDIR /app
 
-COPY app.py requirements.txt .
-
+COPY requirements.txt ./
 RUN pip3 install --upgrade pip && pip install -r requirements.txt
+
+COPY app.py ./
 
 EXPOSE 7166
 
